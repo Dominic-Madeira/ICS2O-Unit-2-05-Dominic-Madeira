@@ -20,6 +20,6 @@ function myButtonClicked () {
   const you_get = pay_no_tax - tax
 
   // output
-document.getElementById('your-pay').innerHTML = 'Your pay will be: $' + you_get.toFixed(2)
-document.getElementById('their-pay').innerHTML = 'The government will take: $' + tax.toFixed(2)
+  document.getElementById('your-pay').innerHTML = 'Your pay will be: $' + you_get.toFixed(2)
+  document.getElementById('their-pay').innerHTML = 'The government will take: $' + tax.toFixed(2)
 }
