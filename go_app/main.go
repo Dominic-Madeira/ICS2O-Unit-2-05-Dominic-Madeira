@@ -1,31 +1,39 @@
 // Created by: Dominic M.
 // Created on: March 2023
 //
-// This program finds the area and perimeter of a rectangle
-
+// This program finds how much money you take home and how much the government gets.
 package main
 
 import "fmt"
 
 func main() {
-	// This function finds the area and perimeter of a rectangle
-	var hour int
-	var pays int
-	var TAX_RATE int
+	var TAX_RATE float64 = 0.18
+	var hour float64
+	var pays float64
+	var yourPay float64
+	var youGet float64
+	var taxes float64
 
 	// input
-	fmt.Println("This program finds how much money you take home and how much the government gets")
+	fmt.Println("This program finds how much money you take home and how much the government gets.")
 	fmt.Println()
 	fmt.Print("How many hours do you work: ")
 	fmt.Scanln(&hour)
+	fmt.Println()
 	fmt.Print("What is your pay: ")
 	fmt.Scanln(&pays)
 
 	// process
-	area = (base * height) / 2
+	yourPay = hour * pays
+	taxes = yourPay * TAX_RATE
+	youGet = yourPay - taxes
 
 	// output
 	fmt.Println()
-	fmt.Println("The area is:", area, "cm².")
+	youGetFormatted := fmt.Sprintf("%.2f", youGet)
+	taxesFormatted := fmt.Sprintf("%.2f", taxes)
+	fmt.Println("Your pay will be: $", youGetFormatted)
+	fmt.Println("The government will get: $", taxesFormatted)
+
 	fmt.Println("\nDone.")
 }
