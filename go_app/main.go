@@ -7,7 +7,6 @@ package main
 import "fmt"
 
 func main() {
-	var TAX_RATE float64 = 0.18
 	var hour float64
 	var pays float64
 	var yourPay float64
@@ -24,6 +23,7 @@ func main() {
 	fmt.Scanln(&pays)
 
 	// process
+	TAX_RATE := 0.18
 	yourPay = hour * pays
 	taxes = yourPay * TAX_RATE
 	youGet = yourPay - taxes
