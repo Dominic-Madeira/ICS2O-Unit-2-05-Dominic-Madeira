@@ -23,9 +23,9 @@ func main() {
 	fmt.Scanln(&pays)
 
 	// process
-	TAX_RATE := 0.18
+	taxRate := 0.18
 	yourPay = hour * pays
-	taxes = yourPay * TAX_RATE
+	taxes = yourPay * taxRate
 	youGet = yourPay - taxes
 
 	// output
