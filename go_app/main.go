@@ -12,6 +12,7 @@ func main() {
 	var yourPay float64
 	var youGet float64
 	var taxes float64
+	var taxRate float64 = 0.18
 
 	// input
 	fmt.Println("This program finds how much money you take home and how much the government gets.")
@@ -23,7 +24,6 @@ func main() {
 	fmt.Scanln(&pays)
 
 	// process
-	taxRate := 0.18
 	yourPay = hour * pays
 	taxes = yourPay * taxRate
 	youGet = yourPay - taxes
