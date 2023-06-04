@@ -7,11 +7,26 @@
 /**
  * This function calculates area and perimeter of rectangle.
  */
+
+function myInfo() {
+  if (localStorage.pay) {
+    document.getElementById('pay').value = localStorage.pay
+  }
+  if (localStorage.hours) {
+    document.getElementById('hours').value = localStorage.hours
+  }
+  if (localStorage.pay && localStorage.hours) {
+    myButtonClicked()
+  }
+}
+
 function myButtonClicked () {
   // input
   const hours = parseFloat(document.getElementById('hours').value)
   const payday = parseFloat(document.getElementById('pay').value)
 
+  localStorage.pay = payday
+  localStorage.hours = hours
 
   // process
   const TAX_RATE = 0.18
